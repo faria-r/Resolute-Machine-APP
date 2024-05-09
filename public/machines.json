@@ -1,0 +1,80 @@
+[
+    {
+      "_id": "663ce5465f0338451a338e61",
+      "condition": false,
+      "picture": "https://i.ibb.co/nPLKH60/162962.png",
+      "idle": 23,
+      "active": 139,
+      "alerts": 7,
+      "name": "Dilli - 1 Malls",
+      "power": 3314,
+      "runtime": 137,
+      "reporting": 169,
+      "message": "Low Condenser Refrigerent Level"
+    },
+    {
+      "_id": "663ce5463a4e483c36744c68",
+      "condition": false,
+      "picture": "https://i.ibb.co/LpSK94H/d.jpg",
+      "idle": 24,
+      "active": 149,
+      "alerts": 8,
+      "name": "Chennai - 5 Malls",
+      "power": 2250,
+      "runtime": 142,
+      "reporting": 145,
+      "message": "Low Condenser Refrigerent Level"
+    },
+    {
+      "_id": "663ce5463d4c6294e88896e1",
+      "condition": true,
+      "picture": "https://i.ibb.co/4dxc8Ld/fg.png",
+      "idle": 28,
+      "active": 134,
+      "alerts": 5,
+      "name": "Agra - 2 Malls",
+      "power": 2711,
+      "runtime": 138,
+      "reporting": 172,
+      "message": "Low Condenser Refrigerent Level"
+    },
+    {
+      "_id": "663ce54694fe3fb796889c3e",
+      "condition": false,
+      "picture": "https://i.ibb.co/8bzkCMg/images.png",
+      "idle": 35,
+      "active": 141,
+      "alerts": 7,
+      "name": "Bengalur - 1 Malls",
+      "power": 2026,
+      "runtime": 137,
+      "reporting": 177,
+      "message": "Low Condenser Refrigerent Level"
+    },
+    {
+      "_id": "663ce5461351d5196fed2aee",
+      "condition": true,
+      "picture": "https://i.ibb.co/Lph8hQn/145512.png",
+      "idle": 37,
+      "active": 113,
+      "alerts": 7,
+      "name": "Pune - 3 Malls",
+      "power": 3086,
+      "runtime": 123,
+      "reporting": 173,
+      "message": "Low Condenser Refrigerent Level"
+    },
+    {
+      "_id": "663ce5468fd3b2ba727ac843",
+      "condition": true,
+      "picture": "https://i.ibb.co/27dtBHs/145505.png",
+      "idle": 39,
+      "active": 139,
+      "alerts": 6,
+      "name": "Indore - 1 Malls",
+      "power": 2571,
+      "runtime": 128,
+      "reporting": 177,
+      "message": "Low Condenser Refrigerent Level"
+    }
+  ]

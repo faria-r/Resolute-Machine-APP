@@ -1,8 +1,8 @@
-import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, updateProfile } from "firebase/auth";
 import React, { createContext, useEffect, useState } from "react";
 import app from "../Firebase/Firebase.config";
 
-const AuthContext = createContext();
+export const AuthContext = createContext();
 const auth = getAuth(app);
 
 const AuthProvider = ({ children }) => {
@@ -23,9 +23,42 @@ const AuthProvider = ({ children }) => {
     };
   }, []);
 
-  //create a user with email  password
+  //update a user profile
+  const updateUserProfile = (name,photo)=>{
+    return updateProfile(auth.currentUser,{
+        displayName:name,
+        photoURL:photo
+    })
+  }
 
-  const authInfo = {};
+  //create user with email password
+  const createUser = (email, password) => {
+    return createUserWithEmailAndPassword(auth, email, password);
+  };
+  //sign in with email password
+  const signIn = (email, password) => {
+    return signInWithEmailAndPassword(auth, email, password);
+  };
+  //login with google
+
+  const loginWithGoogle = (provider) => {
+    return signInWithPopup(auth, provider);
+  };
+    //logOUT
+    const logOut = () => {
+        return signOut(auth);
+      };
+
+
+  const authInfo = {
+    user,
+    loading,
+    updateUserProfile,
+    createUser,
+    signIn,
+    loginWithGoogle,
+    logOut,
+  };
 
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
