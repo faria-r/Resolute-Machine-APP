@@ -15,7 +15,11 @@ export const router = createBrowserRouter([
         {
             path:'/dashboard/addUser',
             element:<UserForm></UserForm>
-        }
+        },
+        {
+            path:'/dashboard/machines',
+            element:<UserForm></UserForm>
+        },
     ]
 },
 

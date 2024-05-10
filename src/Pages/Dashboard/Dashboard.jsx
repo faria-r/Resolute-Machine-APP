@@ -32,8 +32,8 @@ const Dashboard = () => {
                 </li>
                 <li className="rounded-none  text-white lg:text-xl">
                   {" "}
-                  <Link to="/dashboard/homes">
-                    <MdOutlineBookmarkAdded /> Booking's
+                  <Link to="/dashboard/machines">
+                    <MdOutlineBookmarkAdded /> Machine's
                   </Link>
                 </li>
                 <li className="rounded-none  text-white lg:text-xl">
