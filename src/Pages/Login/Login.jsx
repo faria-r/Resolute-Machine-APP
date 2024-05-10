@@ -30,15 +30,16 @@ const Login = () => {
     loginWithGoogle(provider)
       .then((result) => {
         console.log(result.user);
-        const userInfo = {
-          email: result.user?.email,
-          name: result.user?.displayName,
-          photo: result.user?.photoURL,
-        };
-        axiosPublic.post("/users", userInfo).then((res) => {
-          console.log(res.data);
-          navigate("/dashboard");
-        });
+        navigate("/dashboard");
+        // const userInfo = {
+        //   email: result.user?.email,
+        //   name: result.user?.displayName,
+        //   photo: result.user?.photoURL,
+        // };
+        // axiosPublic.post("/users", userInfo).then((res) => {
+        //   console.log(res.data);
+        
+        // });
       })
       .catch((error) => console.log(error));
   };

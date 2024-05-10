@@ -32,7 +32,7 @@ const Dashboard = () => {
                 </li>
                 <li className="rounded-none  text-white lg:text-xl">
                   {" "}
-                  <Link to="/dashboard/machines">
+                  <Link to="/dashboard">
                     <MdOutlineBookmarkAdded /> Machine's
                   </Link>
                 </li>
@@ -79,7 +79,7 @@ const Dashboard = () => {
             )}
           </ul>
         </div>
-        <div className="flex mt-28 bg-white w-full">
+        <div className="flex mt-28 bg-white text-center w-full">
           <Outlet></Outlet>
         </div>
       </div>

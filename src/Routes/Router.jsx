@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Login from "../Pages/Login/Login";
 import Dashboard from "../Pages/Dashboard/Dashboard";
 import UserForm from "../Pages/UserForm/UserForm";
+import Machines from "../Pages/Machines/Machines";
 
 export const router = createBrowserRouter([
     {
@@ -13,13 +14,14 @@ export const router = createBrowserRouter([
     element:<Dashboard></Dashboard>,
     children:[
         {
-            path:'/dashboard/addUser',
-            element:<UserForm></UserForm>
+            path:'/dashboard',
+            element:<Machines></Machines>
         },
         {
-            path:'/dashboard/machines',
+            path:'/dashboard/addUser',
             element:<UserForm></UserForm>
-        },
+        }
+       
     ]
 },
 
