@@ -5,6 +5,7 @@ import UserForm from "../Pages/UserForm/UserForm";
 import Machines from "../Pages/Machines/Machines";
 import UserMachines from "../Pages/UserMachines/UserMachines";
 import Users from "../Pages/Users/Users";
+import AdminRoute from "./AdminRoute";
 
 export const router = createBrowserRouter([
     {
@@ -17,7 +18,7 @@ export const router = createBrowserRouter([
     children:[
         {
             path:'/dashboard',
-            element:<Machines></Machines>
+            element:<AdminRoute><Machines></Machines></AdminRoute>
         },
         {
             path:'/dashboard/users',
