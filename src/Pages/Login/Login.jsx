@@ -18,11 +18,12 @@ const Login = () => {
   const handleLogin = (data) => {
     signIn(data.email, data.password)
       .then((result) => {
+        navigate("/dashboard");
         const user = result.user;
         console.log(user);
       })
       .catch((error) => console.log(error));
-      navigate("/dashboard");
+      
   };
 
   //function to login with google
@@ -31,15 +32,6 @@ const Login = () => {
       .then((result) => {
         console.log(result.user);
         navigate("/dashboard");
-        // const userInfo = {
-        //   email: result.user?.email,
-        //   name: result.user?.displayName,
-        //   photo: result.user?.photoURL,
-        // };
-        // axiosPublic.post("/users", userInfo).then((res) => {
-        //   console.log(res.data);
-        
-        // });
       })
       .catch((error) => console.log(error));
   };

@@ -7,11 +7,12 @@ import { IoIosPersonAdd, IoMdLogOut } from "react-icons/io";
 import { MdOutlineBookmarkAdded } from "react-icons/md";
 import { Link, Outlet, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import useAdmin from "../../Hooks/useAdmin";
 
 const Dashboard = () => {
-  const isAdmin = false;
   const navigate = useNavigate();
   const { logOut } = useContext(AuthContext);
+  const [isAdmin] = useAdmin();
   const handleLogOut = () => {
     logOut();
     navigate("/");
