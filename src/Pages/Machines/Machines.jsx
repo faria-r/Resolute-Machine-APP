@@ -9,18 +9,20 @@ const Machines = () => {
     queryKey: ["machines"],
     queryFn: async () => {
       const res = await axiosPublic.get("/allMachines");
-      console.log(res.data)
+      console.log(res.data);
       return res.data;
     },
   });
   if (isPending) return "Loading.....";
   return (
-    <div className="text-black text-center w-[80vw] mx-auto">
-      <h2 className="text-center text-orange-600 text-2xl font-mono my-2">Listed Machines</h2>
-      <div className="grid lg:grid-cols-3 gap-4 w-[80vw] mx-auto">
-        {
-data.map(machine => <Machine key={machine._id} machine={machine}></Machine>)
-        }
+    <div className="text-black text-center lg:w-[80vw] mx-auto">
+      <h2 className="text-center text-orange-600 text-2xl font-mono my-2">
+        Listed Machines
+      </h2>
+      <div className="grid lg:grid-cols-3 gap-4 lg:w-[80vw] mx-auto">
+        {data.map((machine) => (
+          <Machine key={machine._id} machine={machine}></Machine>
+        ))}
       </div>
     </div>
   );

@@ -3,6 +3,7 @@ import Login from "../Pages/Login/Login";
 import Dashboard from "../Pages/Dashboard/Dashboard";
 import UserForm from "../Pages/UserForm/UserForm";
 import Machines from "../Pages/Machines/Machines";
+import UserMachines from "../Pages/UserMachines/UserMachines";
 
 export const router = createBrowserRouter([
     {
@@ -20,6 +21,10 @@ export const router = createBrowserRouter([
         {
             path:'/dashboard/addUser',
             element:<UserForm></UserForm>
+        },
+        {
+            path:'/dashboard/myMachines',
+            element:<UserMachines></UserMachines>
         }
        
     ]

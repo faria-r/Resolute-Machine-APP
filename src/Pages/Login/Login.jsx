@@ -22,7 +22,7 @@ const Login = () => {
         console.log(user);
       })
       .catch((error) => console.log(error));
-    navigate(from, { replace: true });
+      navigate("/dashboard");
   };
 
   //function to login with google
