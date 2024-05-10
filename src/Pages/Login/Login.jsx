@@ -14,7 +14,7 @@ const Login = () => {
   const { signIn, loginWithGoogle } = useContext(AuthContext);
   const provider = new GoogleAuthProvider();
   const axiosPublic = useAxiosPublic();
-  
+
   //function to login a user
   const handleLogin = (data) => {
     signIn(data.email, data.password)
@@ -24,7 +24,6 @@ const Login = () => {
         console.log(user);
       })
       .catch((error) => console.log(error));
-      
   };
 
   //function to login with google
@@ -39,42 +38,41 @@ const Login = () => {
   return (
     <div className="lg:flex justify-between h-[100vh]">
       <div className="h-[100vh] lg:w-[50vw] bg-orange-400">
-      <TypeAnimation className="text-center mt-36 text-[50px] text-white font-mono"
-      sequence={[
-        // Same substring at the start will only be typed out once, initially
-        'Resolute Machine App',
-        1000, // wait 1s before replacing "Mice" with "Hamsters"
-        'Resolute Machine App',
-        1000,
-        'Resolute Machine App Manage Your Machines',
-        1000,
-        'Resolute Machine App Solves Your Critical Issues',
-        1000
-      ]}
-      wrapper="span"
-      speed={50}
-      style={{ fontSize: '2em', display: 'inline-block' }}
-      repeat={Infinity}
-    />
-       
-        
+        <TypeAnimation
+          className="text-center mt-36 text-[50px] text-white font-mono"
+          sequence={[
+            // Same substring at the start will only be typed out once, initially
+            "Resolute Machine App",
+            1000, // wait 1s before replacing "Mice" with "Hamsters"
+            "Resolute Machine App",
+            1000,
+            "Resolute Machine App Manage Your Machines",
+            1000,
+            "Resolute Machine App Solves Your Critical Issues",
+            1000,
+          ]}
+          wrapper="span"
+          speed={50}
+          style={{ fontSize: "2em", display: "inline-block" }}
+          repeat={Infinity}
+        />
       </div>
       <div>
         <div className="pb-12 w-3/4 lg:w-[50vw] mx-auto  h-[70vh] my-auto">
-        <TypeAnimation className="text-center mt-6 w-[50vw] mx-auto mb-6  text-[30px] text-orange-600 font-mono"
-      sequence={[
-        // Same substring at the start will only be typed out once, initially
-        ' Login',
-        1000, // wait 1s before replacing "Mice" with "Hamsters"
-        ' Login to Explore',
-        1000,
-        
-      ]}
-      wrapper="span"
-      speed={50}
-      style={{ fontSize: '2em', display: 'inline-block' }}
-      repeat={Infinity}
-    />
+          <TypeAnimation
+            className="text-center mt-6 w-[50vw] mx-auto mb-6  text-[30px] text-orange-600 font-mono"
+            sequence={[
+              // Same substring at the start will only be typed out once, initially
+              " Login",
+              1000, // wait 1s before replacing "Mice" with "Hamsters"
+              " Login to Explore",
+              1000,
+            ]}
+            wrapper="span"
+            speed={50}
+            style={{ fontSize: "2em", display: "inline-block" }}
+            repeat={Infinity}
+          />
           <form
             onSubmit={handleSubmit(handleLogin)}
             className=" border  shadow-xl border-orange-600 bg-transparent lg:w-[30vw] mb-16 mx-auto pt-12  px-8 bg-white opacity-70 h-[100vh] lg:h-[70vh]"

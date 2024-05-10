@@ -12,9 +12,6 @@ import { CgSmartHomeWashMachine } from "react-icons/cg";
 import { GiVendingMachine } from "react-icons/gi";
 import Navbar from "../Navbar/Navbar";
 
-
-
-
 const Dashboard = () => {
   const navigate = useNavigate();
   const { logOut } = useContext(AuthContext);
@@ -26,9 +23,10 @@ const Dashboard = () => {
   return (
     <div>
       <div className="w-auto min-h-[100vh] bg-orange-500 ">
-     <div className="text-center"><Navbar></Navbar></div>
+        <div className="text-center">
+          <Navbar></Navbar>
+        </div>
         <div className="flex text-white">
-       
           {/* sidebar content */}
           <div className="sm:w-[20vw] lg:w-64 min-h-[100vh] bg-orange-600 mt-6">
             <ul className="menu p-4">
@@ -49,14 +47,14 @@ const Dashboard = () => {
                   <li className="rounded-none  text-white lg:text-xl">
                     {" "}
                     <Link to="/dashboard">
-                    <GiVendingMachine /> Machine's
+                      <GiVendingMachine /> Machine's
                     </Link>
                   </li>
 
                   <li className="rounded-none  text-white lg:text-xl">
                     {" "}
                     <Link to="/dashboard/addMachine">
-                    <CgSmartHomeWashMachine /> Add Machines
+                      <CgSmartHomeWashMachine /> Add Machines
                     </Link>
                   </li>
                   <li className="rounded-none  text-white lg:text-xl">

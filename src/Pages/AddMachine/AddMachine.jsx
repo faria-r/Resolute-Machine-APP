@@ -5,7 +5,7 @@ import useAxiosPublic from "../../Hooks/useAxiosPublic";
 import Swal from "sweetalert2";
 
 const AddMachine = () => {
-    const axiosPublic = useAxiosPublic();
+  const axiosPublic = useAxiosPublic();
   //generate a unique key for each machine
   const generateKey = () => {
     let min = 150000000000;
@@ -17,58 +17,56 @@ const AddMachine = () => {
   const { register, handleSubmit } = useForm();
 
   //handling add machine to database
-  const handleAddMachine = (data)=>{
-   const machineInfo = {
-    id: data._id ,
-    condition: data.condition ,
-    picture: data.photo ,
-    idle: data.idle ,
-    active: data.active ,
-    alerts: data.alerts ,
-    name: data.name ,
-    power: data.power ,
-    runtime: data.runtime ,
-    reporting: data.reporting ,
-    message: data.message 
-   }
- 
-console.log(machineInfo)
-axiosPublic.post('/allMachines',machineInfo)
-.then(res =>{
-    console.log(res.data)
-    if(res.data.insertedId){
+  const handleAddMachine = (data) => {
+    const machineInfo = {
+      id: data._id,
+      condition: data.condition,
+      picture: data.photo,
+      idle: data.idle,
+      active: data.active,
+      alerts: data.alerts,
+      name: data.name,
+      power: data.power,
+      runtime: data.runtime,
+      reporting: data.reporting,
+      message: data.message,
+    };
+
+    console.log(machineInfo);
+    axiosPublic.post("/allMachines", machineInfo).then((res) => {
+      console.log(res.data);
+      if (res.data.insertedId) {
         Swal.fire({
-            title: "Successfully Added A New Machine",
-            width: 600,
-            padding: "3em",
-            color: "#716add",
-            background: "#fff url(/images/trees.png)",
-            backdrop: `
+          title: "Successfully Added A New Machine",
+          width: 600,
+          padding: "3em",
+          color: "#716add",
+          background: "#fff url(/images/trees.png)",
+          backdrop: `
               rgba(0,0,123,0.4)
               url("/images/nyan-cat.gif")
               left top
               no-repeat
-            `
-          });
-    }
-    else{
-      Swal.fire({
-        title: "This Machine is already Exists , Add A New One",
-        width: 600,
-        padding: "3em",
-        color: "#716add",
-        background: "#fff url(/images/trees.png)",
-        backdrop: `
+            `,
+        });
+      } else {
+        Swal.fire({
+          title: "This Machine is already Exists , Add A New One",
+          width: 600,
+          padding: "3em",
+          color: "#716add",
+          background: "#fff url(/images/trees.png)",
+          backdrop: `
           rgba(0,0,123,0.4)
           url("/images/nyan-cat.gif")
           left top
           no-repeat
-        `
-      });
-    }
-    data.reset();
-})
-  }
+        `,
+        });
+      }
+      data.reset();
+    });
+  };
 
   return (
     <div className="text-orange-600 lg:w-[70vw] mx-auto">
@@ -81,7 +79,7 @@ axiosPublic.post('/allMachines',machineInfo)
         className="grid lg:grid-cols-3 gap-4 p-6 w-[70vw] mx-auto border-x-[2px] border-orange-700"
         onSubmit={handleSubmit(handleAddMachine)}
       >
-         <div>
+        <div>
           <select
             className="select select-bordered w-full max-w-xs"
             {...register("name")}
@@ -96,7 +94,6 @@ axiosPublic.post('/allMachines',machineInfo)
             <option>Lake Circus 6 Malls</option>
             <option>Kornatok 1 Malls</option>
             <option>Uttor Pradesh 1 Malls</option>
-            
           </select>
         </div>
         <div>

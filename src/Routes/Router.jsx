@@ -38,16 +38,16 @@ export const router = createBrowserRouter([
         path: "/dashboard/addMachine",
         element: <AddMachine></AddMachine>,
       },
-      
+
       {
         path: "/dashboard/myMachines",
         element: <UserMachines></UserMachines>,
       },
       {
         path: "/dashboard/machine/:id",
-        loader: ({ params }) => fetch(`http://localhost:5000/machine/${params.id}`),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/machine/${params.id}`),
         element: <DetailedMachine></DetailedMachine>,
-       
       },
     ],
   },

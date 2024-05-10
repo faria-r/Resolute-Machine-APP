@@ -42,7 +42,7 @@ const Users = () => {
               <th>Name</th>
               <th>Email</th>
               <th>Role</th>
-              <th>Assign Machine</th>
+              <th>Assigned Machine</th>
             </tr>
           </thead>
           <tbody>
@@ -76,7 +76,7 @@ const Users = () => {
                 </td>
 
                 <th>
-                  <button className="btn btn-ghost btn-xs">details</button>
+                  <button className="btn btn-ghost btn-xs">{user.machine}</button>
                 </th>
               </tr>
             ))}

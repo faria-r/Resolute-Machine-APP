@@ -17,17 +17,17 @@ const DetailedMachine = () => {
     reporting,
     message,
   } = data;
-const utilization = runtime/reporting;
-const utilizationP = (utilization * 100).toFixed(2);
-const lifeSpan = runtime * reporting;
+  const utilization = runtime / reporting;
+  const utilizationP = (utilization * 100).toFixed(2);
+  const lifeSpan = runtime * reporting;
   return (
-    <div className="lg:w-[75vw] mx-auto my-2 border  px-2 ">
+    <div className="w-[65vw] lg:w-[75vw] mx-auto my-2 border  px-2 ">
       {condition ? (
-        <p className="bg-orange-300 text-orange-600 text-3xl font-bold font-mono">
+        <p className="bg-orange-300 text-orange-600 lg:text-3xl font-bold font-mono">
           Condition is Safe
         </p>
       ) : (
-        <p className="bg-red-600  font-mono rounded text-xl text-white">
+        <p className="bg-red-600  font-mono rounded lg:text-xl text-white">
           {message} <br />
           <span className="text-xs">
             The Chiller has been operated for an extend period of time and its
@@ -41,14 +41,12 @@ const lifeSpan = runtime * reporting;
           <p>Insufficent Charge</p>
           <p>Low Load Operate</p>
           <p>Refrigerent Level Control System Down</p>
-         
         </div>
         <div>
           <h2 className="text-xl font-bold">Possible Impacts</h2>
           <p>Insufficent Charge</p>
           <p>Low Load Operate</p>
           <p>Refrigerent Level Control System Down</p>
-         
         </div>
       </div>
       <div className="grid lg:grid-cols-4 gap-4 text-black text-start">
@@ -73,10 +71,15 @@ const lifeSpan = runtime * reporting;
           <p className="text-xl font-bold font-mono my-2">{lifeSpan} hrs</p>
         </div>
       </div>
-      <div className=" flex justify-center gap-2">
-        <div className="-mt-16"><Chart></Chart></div>
-        <div><h2 className="text-red-500 mt-8 font-mono text-2xl font-semibold">Fault History</h2></div>
-      
+      <div className="w-3/4 lg:flex justify-center gap-2">
+        <div className="-ml-20 lg:-mt-16">
+          <Chart></Chart>
+        </div>
+        <div>
+          <h2 className="text-red-500 mt-8 font-mono text-2xl font-semibold">
+            Fault History
+          </h2>
+        </div>
       </div>
     </div>
   );

@@ -23,45 +23,43 @@ const UserForm = () => {
       .then((result) => {
         const user = result.user;
         console.log(user);
-        updateUserProfile(data.name,data.photoURL)
-        .then(()=>{
-          console.log('user profile is updated')
+        updateUserProfile(data.name, data.photoURL).then(() => {
+          console.log("user profile is updated");
           //create user entry in the database
           const userInfo = {
-            name:data.name,
-            email:data.email,
-            photo:data.photoURL,
-            machine:data.machine
-          }
-          console.log(userInfo)
-          axiosPublic.post('/users',userInfo)
-          .then(res => {
-            console.log(res.data)
-            if(res.data.insertedId){
-              console.log('added in db')
-              Swal.fire({
-                title: "Added A New User",
-                showClass: {
-                  popup: `
+            name: data.name,
+            email: data.email,
+            photo: data.photoURL,
+            machine: data.machine,
+          };
+          console.log(userInfo);
+          axiosPublic
+            .post("/users", userInfo)
+            .then((res) => {
+              console.log(res.data);
+              if (res.data.insertedId) {
+                console.log("added in db");
+                Swal.fire({
+                  title: "Added A New User",
+                  showClass: {
+                    popup: `
                     animate__animated
                     animate__fadeInUp
                     animate__faster
-                  `
-                },
-                hideClass: {
-                  popup: `
+                  `,
+                  },
+                  hideClass: {
+                    popup: `
                     animate__animated
                     animate__fadeOutDown
                     animate__faster
-                  `
-                }
-              });
-            }
-          
-          })
-          .catch(e => console.log(e))
-
-        })
+                  `,
+                  },
+                });
+              }
+            })
+            .catch((e) => console.log(e));
+        });
       })
       .catch((error) => {
         console.log(error);
