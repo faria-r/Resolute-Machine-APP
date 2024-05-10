@@ -27,9 +27,9 @@ const Machine = ({ machine }) => {
       <div>
         <h2 className="text-start font-bold mb-2">{name}</h2>
       </div>
-      <div className="flex justify-center gap-2 items-center">
+      <div className="flex justify-between gap-2 items-center">
         <div>
-          <img className="w-[150px] h-[150px]" src={picture} alt="" srcset="" />
+          <img className="w-[120px] h-[120px]" src={picture} alt="" srcset="" />
         </div>
         <div className="text-start">
           <h2>Machines Active:{active}</h2>

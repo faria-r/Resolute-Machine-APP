@@ -39,17 +39,17 @@ const Login = () => {
     <div className="lg:flex justify-between items-center">
       <div className="h-[100vh]">
         <img
-          className="h-[100vh] w-[50vw]"
+          className="h-[100vh] lg:w-[50vw]"
           src="https://i.ibb.co/H7tZZYw/dsf.jpg"
           alt=""
           srcset=""
         />
       </div>
       <div>
-        <div className="py-12 pb-28 w-[50vw] mx-auto h-[80vh] my-auto">
+        <div className="py-12 pb-28 lg:w-[50vw] mx-auto  h-[80vh] my-auto">
           <form
             onSubmit={handleSubmit(handleLogin)}
-            className=" border  shadow-xl border-orange-600 bg-transparent lg:w-[30vw] mb-16 mx-auto pt-12  px-8 bg-white opacity-70 h-[70vh]"
+            className=" border  shadow-xl border-orange-600 bg-transparent lg:w-[30vw] mb-16 mx-auto pt-12  px-8 bg-white opacity-70 h-[100vh] lg:h-[70vh]"
           >
             <div className="">
               <h2 className="text-5xl text-green-700 w-8 mx-auto text-center font-mono uppercase"></h2>

@@ -8,6 +8,8 @@ import { MdOutlineBookmarkAdded } from "react-icons/md";
 import { Link, Outlet, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import useAdmin from "../../Hooks/useAdmin";
+import { CgSmartHomeWashMachine } from "react-icons/cg";
+import { GiVendingMachine } from "react-icons/gi";
 
 const Dashboard = () => {
   const navigate = useNavigate();
@@ -41,14 +43,14 @@ const Dashboard = () => {
                   <li className="rounded-none  text-white lg:text-xl">
                     {" "}
                     <Link to="/dashboard">
-                      <MdOutlineBookmarkAdded /> Machine's
+                    <GiVendingMachine /> Machine's
                     </Link>
                   </li>
 
                   <li className="rounded-none  text-white lg:text-xl">
                     {" "}
-                    <Link to="/dashboard/homes">
-                      <BsFillHouseAddFill /> Add Machines
+                    <Link to="/dashboard/addMachine">
+                    <CgSmartHomeWashMachine /> Add Machines
                     </Link>
                   </li>
                   <li className="rounded-none  text-white lg:text-xl">
