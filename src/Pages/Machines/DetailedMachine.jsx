@@ -21,7 +21,7 @@ const utilization = runtime/reporting;
 const utilizationP = (utilization * 100).toFixed(2);
 const lifeSpan = runtime * reporting;
   return (
-    <div className="w-[75vw] mx-auto my-2 border  px-2 ">
+    <div className="lg:w-[75vw] mx-auto my-2 border  px-2 ">
       {condition ? (
         <p className="bg-orange-300 text-orange-600 text-3xl font-bold font-mono">
           Condition is Safe

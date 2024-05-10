@@ -10,6 +10,10 @@ import { AuthContext } from "../../AuthProvider/AuthProvider";
 import useAdmin from "../../Hooks/useAdmin";
 import { CgSmartHomeWashMachine } from "react-icons/cg";
 import { GiVendingMachine } from "react-icons/gi";
+import Navbar from "../Navbar/Navbar";
+
+
+
 
 const Dashboard = () => {
   const navigate = useNavigate();
@@ -22,9 +26,11 @@ const Dashboard = () => {
   return (
     <div>
       <div className="w-auto min-h-[100vh] bg-orange-500 ">
+     <div className="text-center"><Navbar></Navbar></div>
         <div className="flex text-white">
+       
           {/* sidebar content */}
-          <div className="sm:w-[20vw] lg:w-64 min-h-[100vh] bg-orange-600 mt-20">
+          <div className="sm:w-[20vw] lg:w-64 min-h-[100vh] bg-orange-600 mt-6">
             <ul className="menu p-4">
               {isAdmin ? (
                 <>
@@ -79,7 +85,7 @@ const Dashboard = () => {
               )}
             </ul>
           </div>
-          <div className="flex mt-20 bg-white text-center w-full">
+          <div className="flex mt-6 bg-white text-center w-full">
             <Outlet></Outlet>
           </div>
         </div>
