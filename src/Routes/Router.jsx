@@ -7,38 +7,48 @@ import UserMachines from "../Pages/UserMachines/UserMachines";
 import Users from "../Pages/Users/Users";
 import AdminRoute from "./AdminRoute";
 import AddMachine from "../Pages/AddMachine/AddMachine";
+import DetailedMachine from "../Pages/Machines/DetailedMachine";
 
 export const router = createBrowserRouter([
-    {
-    path:'/',
-    element:<Login></Login>
-},
-{
-    path:'/dashboard',
-    element:<Dashboard></Dashboard>,
-    children:[
-        {
-            path:'/dashboard',
-            element:<AdminRoute><Machines></Machines></AdminRoute>
-        },
-        {
-            path:'/dashboard/users',
-            element:<Users></Users>
-        },
-        {
-            path:'/dashboard/addUser',
-            element:<UserForm></UserForm>
-        },
-        {
-            path:'/dashboard/addMachine',
-            element:<AddMachine></AddMachine>
-        },
-        {
-            path:'/dashboard/myMachines',
-            element:<UserMachines></UserMachines>
-        }
+  {
+    path: "/",
+    element: <Login></Login>,
+  },
+  {
+    path: "/dashboard",
+    element: <Dashboard></Dashboard>,
+    children: [
+      {
+        path: "/dashboard",
+        element: (
+          <AdminRoute>
+            <Machines></Machines>
+          </AdminRoute>
+        ),
+      },
+      {
+        path: "/dashboard/users",
+        element: <Users></Users>,
+      },
+      {
+        path: "/dashboard/addUser",
+        element: <UserForm></UserForm>,
+      },
+      {
+        path: "/dashboard/addMachine",
+        element: <AddMachine></AddMachine>,
+      },
+      
+      {
+        path: "/dashboard/myMachines",
+        element: <UserMachines></UserMachines>,
+      },
+      {
+        path: "/dashboard/machine/:id",
+        loader: ({ params }) => fetch(`http://localhost:5000/machine/${params.id}`),
+        element: <DetailedMachine></DetailedMachine>,
        
-    ]
-},
-
-])
+      },
+    ],
+  },
+]);

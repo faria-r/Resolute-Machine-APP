@@ -13,7 +13,11 @@ const Machines = () => {
       return res.data;
     },
   });
-  if (isPending) return "Loading.....";
+  if (isPending)
+    return (
+      <span className="loading absolute top-[40%] left-[40%] text-5xl loading-spinner text-warning"></span>
+    );
+
   return (
     <div className="text-black text-center lg:w-[80vw] mx-auto">
       <h2 className="text-center text-orange-600 text-2xl font-mono my-2">

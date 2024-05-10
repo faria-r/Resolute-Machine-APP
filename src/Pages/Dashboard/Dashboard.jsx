@@ -24,7 +24,7 @@ const Dashboard = () => {
       <div className="w-auto min-h-[100vh] bg-orange-500 ">
         <div className="flex text-white">
           {/* sidebar content */}
-          <div className="sm:w-[20vw] lg:w-64 min-h-[100vh] bg-orange-600 mt-28">
+          <div className="sm:w-[20vw] lg:w-64 min-h-[100vh] bg-orange-600 mt-20">
             <ul className="menu p-4">
               {isAdmin ? (
                 <>
@@ -79,7 +79,7 @@ const Dashboard = () => {
               )}
             </ul>
           </div>
-          <div className="flex mt-28 bg-white text-center w-full">
+          <div className="flex mt-20 bg-white text-center w-full">
             <Outlet></Outlet>
           </div>
         </div>

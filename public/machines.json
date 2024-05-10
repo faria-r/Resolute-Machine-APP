@@ -1,6 +1,6 @@
 [
     {
-      "_id": "663ce5465f0338451a338e61",
+      
       "condition": false,
       "picture": "https://i.ibb.co/nPLKH60/162962.png",
       "idle": 23,
@@ -13,7 +13,7 @@
       "message": "Low Condenser Refrigerent Level"
     },
     {
-      "_id": "663ce5463a4e483c36744c68",
+      
       "condition": false,
       "picture": "https://i.ibb.co/LpSK94H/d.jpg",
       "idle": 24,
@@ -26,7 +26,7 @@
       "message": "Low Condenser Refrigerent Level"
     },
     {
-      "_id": "663ce5463d4c6294e88896e1",
+      
       "condition": true,
       "picture": "https://i.ibb.co/4dxc8Ld/fg.png",
       "idle": 28,
@@ -39,7 +39,7 @@
       "message": "Low Condenser Refrigerent Level"
     },
     {
-      "_id": "663ce54694fe3fb796889c3e",
+      
       "condition": false,
       "picture": "https://i.ibb.co/8bzkCMg/images.png",
       "idle": 35,
@@ -52,7 +52,7 @@
       "message": "Low Condenser Refrigerent Level"
     },
     {
-      "_id": "663ce5461351d5196fed2aee",
+      
       "condition": true,
       "picture": "https://i.ibb.co/Lph8hQn/145512.png",
       "idle": 37,
@@ -65,7 +65,7 @@
       "message": "Low Condenser Refrigerent Level"
     },
     {
-      "_id": "663ce5468fd3b2ba727ac843",
+      
       "condition": true,
       "picture": "https://i.ibb.co/27dtBHs/145505.png",
       "idle": 39,

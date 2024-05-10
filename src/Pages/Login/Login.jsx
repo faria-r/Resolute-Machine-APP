@@ -37,13 +37,14 @@ const Login = () => {
   };
   return (
     <div className="lg:flex justify-between items-center">
-      <div className="h-[100vh]">
-        <img
+      <div className="h-[100vh] w-[50vw] bg-orange-400">
+        <h2 className="text-center mt-32 text-5xl text-white font-mono">Resolute Machine App</h2>
+        {/* <img
           className="h-[100vh] lg:w-[50vw]"
           src="https://i.ibb.co/H7tZZYw/dsf.jpg"
           alt=""
           srcset=""
-        />
+        /> */}
       </div>
       <div>
         <div className="py-12 pb-28 lg:w-[50vw] mx-auto  h-[80vh] my-auto">

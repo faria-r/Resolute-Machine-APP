@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import Button from "../../Components/Button/Button";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
+import { Link } from "react-router-dom";
 
 const Machine = ({ machine }) => {
+  const {loading} = useContext(AuthContext)
+  if(loading){
+    return <span className="loading absolute top-[40%] left-[40%] text-5xl loading-spinner text-warning"></span>;
+  
+  }
   const {
     _id,
     condition,
@@ -23,6 +30,9 @@ const Machine = ({ machine }) => {
     fontFamily: "Arial",
   };
   return (
+   
+   <div>
+    <Link to={`/dashboard/machine/${_id}`}>
     <div className="border p-2">
       <div>
         <h2 className="text-start font-bold mb-2">{name}</h2>
@@ -52,6 +62,8 @@ const Machine = ({ machine }) => {
         <Button style={myStyle} value={"Critical Condition"}></Button>
       )}
     </div>
+    </Link>
+   </div>
   );
 };
 
